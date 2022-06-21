@@ -1,0 +1,27 @@
+* {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bolder;
+}
+
+html {
+    background-color: rgb(104, 56, 249);
+}
+
+#welcome {
+    display: flex;
+    font-size: 100px;
+    justify-content: center;
+    margin-top: 20%;
+}
+
+#start {
+    display: flex;
+    justify-content: center;
+}
+
+#start-it {
+    font-size: 30px;
+    border-radius: 10px;
+    background-color: rgb(164, 240, 240);
+    color: blue;
+}
