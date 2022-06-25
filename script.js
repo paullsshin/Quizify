@@ -54,11 +54,7 @@ var questions = [
  console.log(questions);
 
 function startQuiz () {
-    // if (questions == ) {
-    //     return "Correct!";
-    // } else {
-    //     return "Wrong!";
-    // }
+    
     document.getElementById("timer").innerHTML = "Timer:" + seconds;
     renderQuestion();
     
@@ -98,7 +94,11 @@ document.getElementById("start-it").onclick = function () {
     document.getElementById("welcome").style.visibility = "hidden";
 }
 
+const btn = document.getElementById("start-it");
 
+btn.addEventListener("click", () => {
+    btn.style.display = "none";
+});
 
 // console.log(startQuiz());
 // next question will only be displayed based on postition of array of questions that im currently showing
