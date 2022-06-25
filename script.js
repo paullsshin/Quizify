@@ -54,14 +54,20 @@ var questions = [
  console.log(questions);
 
 function startQuiz () {
-    
+    seconds = 100;
+    var timing = setInterval(function() {
     document.getElementById("timer").innerHTML = "Timer:" + seconds;
+    seconds--;
+    if (seconds < 0) {
+        clearInterval(timing);
+        }
+    }, 1000);
+    
     renderQuestion();
     
     for ( var i = 0; i > 100; i--) {
         $("timer").html()
-    }
-};
+}
 
 function renderQuestion(){
     
@@ -76,8 +82,8 @@ function renderQuestion(){
 
     }
 
-};
-
+    };
+}
 document.getElementById("start-it").addEventListener("click", startQuiz);
 
 function nextQuestion() {

@@ -31,3 +31,15 @@ html {
     background-color: green;
     color: yellow;
 }
+
+#timer {
+  font-size: 30px;
+  font-weight: bolder;
+  width: 150px;
+  background-color: rgb(255, 34, 34);
+  display: flex;
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin: 5px;
+}
