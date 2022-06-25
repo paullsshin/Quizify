@@ -1,15 +1,15 @@
-var start = $("#start");
-var startIt = $("#start-it");
-var game = $("#game");
-var questions = $("#questions");
-var timer = $("#timer");
-var choices = $("#choices");
-var score = $("#score");
-var optionA = $("#A");
-var optionB = $("#B");
-var optionC = $("#C");
-var optionD = $("#D");
-var choice = $(".choice");
+var start = document.getElementById("#start");
+var startIt = document.getElementById("#start-it");
+var game = document.getElementById("#game");
+var questions = document.getElementById("#questions");
+var timer = document.getElementById("#timer");
+var choices = document.getElementById("#choices");
+var score = document.getElementById("#score");
+var optionA = document.getElementById("#A");
+var optionB = document.getElementById("#B");
+var optionC = document.getElementById("#C");
+var optionD = document.getElementById("#D");
+var choice = document.getElementById(".choice");
 var score = 0;
 var seconds = 100;
 var questionTracker = 0;
@@ -90,6 +90,15 @@ function nextQuestion() {
 };
 
 console.log(startIt);
+
+document.getElementById("start-it",).onclick = function () {
+    document.getElementById("welcome").style.visibility = "visible";
+}
+document.getElementById("start-it").onclick = function () {
+    document.getElementById("welcome").style.visibility = "hidden";
+}
+
+
 
 // console.log(startQuiz());
 // next question will only be displayed based on postition of array of questions that im currently showing
