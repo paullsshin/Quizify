@@ -14,6 +14,8 @@ var score = 0;
 var seconds = 100;
 var questionTracker = 0;
 
+// var score = JSON.parse(localStorage.getItem("score")) || [];
+
 var questions = [
     {
         question : "What toy was the very first toy to be advertised on TV?",
@@ -75,11 +77,7 @@ function renderQuestion(){
 
     for (var i = 0; i < 4; i++) {
         console.log(questions[questionTracker].responses[i]);
-        // $(".choice").attr("data-id" + 0)(questions[questionTracker].responses[i]);
-        // // document.querySelector('[data-id="[i]"]').innerHTML = (questions[questionTracker].responses[i]);
-        // $(`.choice[data-id=${i}]`).html(questions[questionTracker].responses[i])
         $(`.choice[data-id=${[i]}]`).html(questions[questionTracker].responses[i])
-
     }
 
     };
@@ -93,11 +91,15 @@ function nextQuestion() {
 
 console.log(startIt);
 
-document.getElementById("start-it",).onclick = function () {
+document.getElementById("start-it").onclick = function () {
     document.getElementById("welcome").style.visibility = "visible";
 }
 document.getElementById("start-it").onclick = function () {
     document.getElementById("welcome").style.visibility = "hidden";
+}
+
+function hideOl () {
+    document.getElementByClass("choice").style.display = "none;"
 }
 
 const btn = document.getElementById("start-it");
@@ -106,7 +108,7 @@ btn.addEventListener("click", () => {
     btn.style.display = "none";
 });
 
-// console.log(startQuiz());
+
 // next question will only be displayed based on postition of array of questions that im currently showing
 
 // create timer
