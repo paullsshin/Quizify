@@ -10,6 +10,7 @@ var optionB = document.getElementById("#B");
 var optionC = document.getElementById("#C");
 var optionD = document.getElementById("#D");
 var choice = document.getElementById(".choice");
+var initials = document.getElementById("initials");
 var seconds = 100;
 var questionTracker = 0;
 
@@ -73,6 +74,7 @@ function renderQuestion(){
     }
 
     };
+    // if (questions[questionTracker].responses )
 }
 
 document.getElementById("choices").addEventListener("click", questions);
