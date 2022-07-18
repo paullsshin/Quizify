@@ -10,7 +10,9 @@
     <link rel="stylesheet" href="Assets/CSS/style.css" />
     <title>Quizify</title>
     <div>
-      <header id="welcome" style="display: visible">Welcome to Quizify!</header>
+      <header id="welcome" style="display: visible">Welcome to Quizify!
+      <p id = "intro" style="display: visible">Once you start the quiz, you will have 60 seconds to complete the quiz. For every wrong answer 10 seconds will be subtracted from your time. Good luck!</p>
+    </header>
       
     </div>
     
@@ -27,7 +29,15 @@
           <ol class="choice" data-id = "3" id="D"></ol>
         </ol>
       </div>
-      <div id="score" style="display: none" ;></div>
+      <div id="final-score" style="display: none">
+        <p>Quiz Completed!</p>
+        <p>Your Score is: <span id = "score"></span></p>
+        <form id = "leaderboard" >
+          <label for="name">Enter Initials: </label>
+          <input type="text" name="initials" id="initials">
+          <button id = "submit">Submit</button>
+        </form>
+      </div>
     </div>
   </head>
   <body>

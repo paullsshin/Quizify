@@ -10,8 +10,15 @@ html {
 #welcome {
   display: flex;
   font-size: 100px;
+  display: grid;
+  text-align: center;
   justify-content: center;
   margin-top: 20%;
+}
+
+#intro {
+  font-size: 30px;
+  font-weight: 300;
 }
 
 #start {
@@ -62,10 +69,11 @@ html {
 }
 
 .choice {
-  display: list-item;
+  display: flex;
   background-color: rgb(99, 235, 235);
   box-shadow: 10px 10px 10px black;
   border-radius: 20px;
+  margin-bottom: 17%;
 }
 
 .choice:hover {

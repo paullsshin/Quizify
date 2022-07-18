@@ -10,7 +10,6 @@ var optionB = document.getElementById("#B");
 var optionC = document.getElementById("#C");
 var optionD = document.getElementById("#D");
 var choice = document.getElementById(".choice");
-var score = 0;
 var seconds = 100;
 var questionTracker = 0;
 
@@ -18,41 +17,33 @@ var questionTracker = 0;
 
 var questions = [
     {
-        question : "What toy was the very first toy to be advertised on TV?",
-        // optionA : "Toy Gun",
-        // optionB : "Bow and Arrow",
-        // optionC : "Mr.Potato Head",
-        // optionD : "Cabbage Patch Kids",
-        responses : ["Toy Gun", "Bow and Arrow","Mr.Potato Head","Cabbage Patch Kids"],
-        // answer : C
-        answer : "Mr.Potato Head"
+        question: "What toy was the very first toy to be advertised on TV?",
+        responses: ["Toy Gun", "Bow and Arrow","Mr.Potato Head","Cabbage Patch Kids"],
+        answer: "Mr.Potato Head"
     },
     {
-        question : "What was the first soft drink in space?",
-        optionA : "Pepsi",
-        optionB : "Coca-Cola",
-        optionC : "7UP",
-        optionD : "Sprite",
-        answer : B
+        question: "What was the first soft drink in space?",
+        responses: ["Pepsi", "Coca-Cola", "7UP", "Sprite"],
+        answer: "Coca-Cola"
     },
     {
-        question : "Which American football team is the only team to have gone a whole season undefeated, including the Super Bowl?",
-        optionA : "Miami Dolphins",
-        optionB : "Oakland Raiders",
-        optionC : "Pittsburgh Steelers",
-        optionD : "Dallas Cowboys",
-        answer : A
+        question: "Which American football team is the only team to have gone a whole season undefeated, including the Super Bowl?",
+        responses: ["Miami Dolphins", "Oakland Raiders", "Pittsburgh Steelers", "Dallas Cowboys"],
+        answer: "Miami Dolphins"
     },
     {
-        question : "Which country has a Unicorn as the national animal?",
-        optionA : "England",
-        optionB : "Switzerland",
-        optionC : "Ireland",
-        optionD : "Scotland",
-        answer : D
+        question: "Which country has a Unicorn as the national animal?",
+        responses: ["england", "Switzerland", "Ireland", "Scotland"],
+        answer: "Scotland"
     },
     
-];
+]
+
+const op1 = document.getElementById("A");
+const op2 = document.getElementById("B");
+const op3 = document.getElementById("C");
+const op4 = document.getElementById("D");
+
  console.log(questions);
 
 function startQuiz () {
@@ -60,8 +51,9 @@ function startQuiz () {
     var timing = setInterval(function() {
     document.getElementById("timer").innerHTML = "Timer:" + seconds;
     seconds--;
-    if (seconds < 0) {
+    if (seconds <= 0) {
         clearInterval(timing);
+        document.getElementById("timer").innerHTML = "GAME OVER"
         }
     }, 1000);
     
@@ -82,6 +74,11 @@ function renderQuestion(){
 
     };
 }
+
+document.getElementById("choices").addEventListener("click", questions);
+
+function chooseQuestion () {};
+
 document.getElementById("start-it").addEventListener("click", startQuiz);
 
 function nextQuestion() {
@@ -97,10 +94,13 @@ document.getElementById("start-it").onclick = function () {
 document.getElementById("start-it").onclick = function () {
     document.getElementById("welcome").style.visibility = "hidden";
 }
-
-function hideOl () {
-    document.getElementByClass("choice").style.display = "none;"
-}
+// thought I needed another "hide" function, but I just moved intro into the header element and it worked!
+// document.getElementById("intro").onclick = function () {
+//     document.getElementById("intro").style.visibility = "visible";
+// }
+// document.getElementById("start-it").onclick = function () {
+//     document.getElementById("intro").style.visibility = "hidden";
+// }
 
 const btn = document.getElementById("start-it");
 
